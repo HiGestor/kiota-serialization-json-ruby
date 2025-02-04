@@ -75,9 +75,9 @@ module MicrosoftKiotaSerializationJson
         else
           current_parse_node.get_string_value
         end
-      rescue StandardError => e
-        raise e.class, `Failed to fetch #{type} type`
       end
+    rescue StandardError => e
+      raise e.class, `Failed to fetch #{type} type`
     end
 
     def get_collection_of_object_values(factory)
